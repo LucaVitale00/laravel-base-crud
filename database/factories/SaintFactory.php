@@ -1,12 +1,7 @@
 <?php
-
 namespace Database\Factories;
-
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-/**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
- */
 class SaintFactory extends Factory
 {
     /**
@@ -17,7 +12,10 @@ class SaintFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nome' => fake()->firstname(),
+            'luogoNascita' => fake()->city(),
+            'dataBenedizione' => fake()->dateTimeAD(),
+            'numeroMiracoli' => fake()->numberBetween(5, 20),
         ];
     }
 }

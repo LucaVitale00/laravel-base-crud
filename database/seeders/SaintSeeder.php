@@ -1,11 +1,10 @@
 <?php
-
 namespace Database\Seeders;
-
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class Saint extends Seeder
+use App\Models\Saint; 
+class SaintSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +13,6 @@ class Saint extends Seeder
      */
     public function run()
     {
-        //
+        Saint::factory()->count(99)->create();
     }
 }
